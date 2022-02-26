@@ -1,0 +1,8 @@
+#compdef rmscreate
+
+function _rmscreate(){
+    # cd $_RMS_ROOT/$_RMS_TEMPLATE
+    for d in $_RMS_ROOT/$_RMS_TEMPLATE/* ; do
+        compadd ${d#$_RMS_ROOT/$_RMS_TEMPLATE/}
+    done
+}

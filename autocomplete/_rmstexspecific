@@ -1,0 +1,22 @@
+#compdef _rmstexspecific rmslaunchtex rmsviewpdf
+
+function _rmstexspecific(){
+    local state
+    _arguments '1: :->project' '2: :->file'
+
+    # cd $RMS_PATH/Project
+
+    case $state in
+        project)
+            for d in $_RMS_ROOT/$_RMS_PROJECT/* ; do
+                compadd ${d#$_RMS_ROOT/$_RMS_PROJECT/}
+            done
+            ;;
+        file)
+            cd ./$words[2]/Paper
+            for tex in $_RMS_ROOT/$_RMS_PROJECT/.tex ; do
+                compadd ${tex#$_RMS_ROOT/$_RMS_PROJECT/: : -4}
+            done
+            ;;
+    esac
+}

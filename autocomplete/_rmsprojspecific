@@ -1,0 +1,13 @@
+#compdef _rmsprojspecific rmscd rmsresetbib
+
+function _rmsprojspecific() {
+    cd $_RMS_ROOT/$_RMS_PROJECT
+    _arguments '1: :->project'
+    case $state in
+        project)
+            for d in $_RMS_ROOT/$_RMS_PROJECT/* ; do
+                compadd ${d#$_RMS_ROOT/$_RMS_PROJECT/}
+            done
+            ;;
+    esac
+}
