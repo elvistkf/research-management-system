@@ -2,9 +2,9 @@
 
 A command-line interface (CLI) toolkit for managing and organising research projects built with zsh and Python.
 
-# Getting Started
+## Getting Started
 
-## Prerequisites
+### Prerequisites
 - A Unix-based operating system. Windows with WSL2 should work but has not been extensively tested.
 - `Python >= 3.7`
 - `git`
@@ -12,11 +12,11 @@ A command-line interface (CLI) toolkit for managing and organising research proj
 - `zsh`
 - [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh/)
 
-## Recommended Tools
+### Recommended Tools
 - Any nerd fonts (for displaying icons)
 <!-- - [powerlevel10k](https://github.com/romkatv/powerlevel10k) -->
 
-## Installation
+### Installation
 
 Install via `curl`:
 ```
